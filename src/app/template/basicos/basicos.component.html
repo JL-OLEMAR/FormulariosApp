@@ -29,11 +29,15 @@
         <div class="col-sm-9">
           <input
             class="form-control"
+            min="0"
             name="precio"
             ngModel
             placeholder="Precio del producto"
             type="number"
           />
+          <span *ngIf="precioValido()" class="form-text text-danger">
+            Debe ser igual o mayor a 0
+          </span>
         </div>
       </div>
 
@@ -55,7 +59,11 @@
 
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-primary float-end">
+          <button
+            [disabled]="miFormulario.invalid"
+            class="btn btn-primary float-end"
+            type="submit"
+          >
             Guardar
           </button>
         </div>

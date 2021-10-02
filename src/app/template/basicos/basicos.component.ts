@@ -16,6 +16,11 @@ export class BasicosComponent {
       this.miFormulario?.controls.producto?.touched)
   }
 
+  precioValido (): boolean {
+    return (this.miFormulario?.controls.precio?.value < 0 &&
+      this.miFormulario?.controls.precio?.touched)
+  }
+
   // guardar (miFormulario: NgForm): void {
   guardar (): void {
     console.log(this.miFormulario)
