@@ -10,7 +10,7 @@
         class="form-control"
         name="nombre"
         [ngModel]="persona.nombre"
-        placeholder="Nombre de la persona..."
+        placeholder="Nombre de la persona"
         required
         type="text"
       />
@@ -28,8 +28,20 @@
     <label class="col-sm-3 col-form-label">Agregar</label>
     <div class="col-sm-9">
       <div class="input-group">
-        <input class="form-control" placeholder="Agregar favorito..." />
-        <button class="btn btn-outline-primary" type="button">Agregar</button>
+        <input
+          (keyup.enter)="agregarJuego()"
+          [(ngModel)]="nuevoJuego"
+          class="form-control"
+          name="nuevoJuego"
+          placeholder="Agrega tu juego favorito"
+        />
+        <button
+          (click)="agregarJuego()"
+          class="btn btn-outline-primary"
+          type="button"
+        >
+          Agregar
+        </button>
       </div>
     </div>
   </div>
