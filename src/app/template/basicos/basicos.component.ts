@@ -27,7 +27,6 @@ export class BasicosComponent {
       this.miFormulario?.controls.precio?.touched)
   }
 
-  // guardar (miFormulario: NgForm): void {
   guardar (): void {
     // console.log(this.miFormulario)
     console.log('Posteo correcto')
