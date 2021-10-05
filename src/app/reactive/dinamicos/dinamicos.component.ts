@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core'
 })
 export class DinamicosComponent implements OnInit {
   // constructor () { }
+  persona: any = {
+    nombre: 'Pepito',
+    favoritos: [
+      { id: 1, nombre: 'Metal Gear' },
+      { id: 2, nombre: 'DeathStranding' }
+    ]
+  }
 
   ngOnInit (): void {
   }
