@@ -28,6 +28,11 @@ export class SwitchesComponent implements OnInit {
       ...this.persona,
       condiciones: false
     })
+
+    this.miFormulario.valueChanges
+      .subscribe(({ condiciones, ...rest }) => {
+        this.persona = rest
+      })
   }
 
   guardar (): void {
