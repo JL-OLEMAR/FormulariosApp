@@ -50,6 +50,11 @@ export class DinamicosComponent {
     this.nuevoFavorito.reset()
   }
 
+  borrar (index: number): void {
+    this.favoritosArray.removeAt(index)
+    console.log(`Elemento ${index} eliminado 😪`)
+  }
+
   // Submit del formulario
   guardar (): void {
     if (this.miFormulario.invalid) {
