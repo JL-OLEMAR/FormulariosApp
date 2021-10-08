@@ -39,5 +39,15 @@
     "stylelint-config-standard": "22.0.0",
     "ts-standard": "10.0.0",
     "typescript": "4.3.5"
+  },
+  "eslintConfig": {
+    "parser": "./tsconfig.json",
+    "extends": [
+      "./node_modules/ts-standard/eslintrc.json"
+    ],
+    "ignorePatterns": [
+      "node_modules/**",
+      "dist/**"
+    ]
   }
 }
