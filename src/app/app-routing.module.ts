@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'reactive',
     loadChildren: async () => await import('./reactive/reactive.module').then(m => m.ReactiveModule)
   },
+  {
+    path: 'auth',
+    loadChildren: async () => await import('./auth/auth.module').then(m => m.AuthModule)
+  },
   { path: '**', redirectTo: 'template' }
 ]
 

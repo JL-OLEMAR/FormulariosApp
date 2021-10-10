@@ -15,6 +15,7 @@ export class BasicosComponent {
     precio: 10,
     existencias: 20
   }
+
   // constructor () { }
 
   nombreValido (): boolean {
